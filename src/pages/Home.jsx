@@ -3,13 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
-      {/* Header using Radix UI Navigation Menu */}
-      <header className="bg-white shadow py-6">
-        <h1 className="text-3xl font-bold text-center text-gray-800">
-          Welcome to My React Boilerplate
-        </h1>
-      </header>
+    <div className="min-h-screen p-6 bg-light flex flex-col">
+      {/* Header */}
 
       {/* Main Content */}
       <main className="flex-grow container mx-auto px-4 py-10">
@@ -21,20 +16,15 @@ const Home = () => {
         </p>
         <div className="text-center">
           <Link
-            to="/about"
+            to="/components"
             className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
           >
-            Learn more about this project
+            Component Library
           </Link>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="bg-white py-4 shadow">
-        <p className="text-center text-gray-600">
-          &copy; {new Date().getFullYear()} Jabez Dailey
-        </p>
-      </footer>
     </div>
   );
 };

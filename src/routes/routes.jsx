@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from '../pages/Home';
 import About from '../pages/About';
+import ComponentLibrary from '../pages/ComponentLibrary';
 
 const routes = [
   {
@@ -10,6 +11,10 @@ const routes = [
   {
     path: '/about',
     element: <About />,
+  },
+  {
+    path: '/components',
+    element: <ComponentLibrary />,
   },
 ];
 
