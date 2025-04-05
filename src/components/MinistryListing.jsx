@@ -3,7 +3,7 @@ import {ArrowRightIcon} from '@radix-ui/react-icons';
 
 const MinistryListing = () => {
   return (
-    <div className='w-full flex hover:cursor-pointer hover:bg-yellow-50 p-2'>
+    <div className='w-full flex hover:cursor-pointer hover:bg-yellow-50 p-2 rounded'>
       <div>
         <h1 className='font-heading'>Youth Outreach</h1>
         <p className='font-body text-sm'>Engaging and empowering the next generation</p>

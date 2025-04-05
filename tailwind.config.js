@@ -4,8 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#0F172A', // deep blue
-        accent: '#FFD700', // gold
+        primary: '#00425F', // deep blue
+        primarylight: '#006981',
+        primarytext: '#394955', // greyish
+        accent: '#F6F2CB', // gold
+        accentdark: '#BDBA95',
         light: '#F1F5F9', // light grey
       },
       fontFamily: {

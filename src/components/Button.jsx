@@ -5,13 +5,16 @@ const Button = ({type, children, ...props}) => {
 
   switch (type) {
     case "primary":
-      className += "bg-primary text-white hover:bg-accent";
+      className += "bg-primary text-white";
       break;
     case "outline":
-      className += "border border-primary hover:bg-primary hover:text-white";
+      className += "border border-primary";
       break;
     case "secondary":
-      className += "bg-light hover:bg-primary hover:text-white"
+      className += "bg-light"
+      break;
+    case "accent":
+      className += "bg-accent"
       break;
     default:
       className += "";
