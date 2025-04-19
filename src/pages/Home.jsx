@@ -62,7 +62,6 @@ const Home = () => {
             <img src="https://img1.wsimg.com/isteam/ip/71f1264f-d92b-4910-b43a-96d18f952c69/DSCN4532.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" />
             <img src="https://img1.wsimg.com/isteam/ip/71f1264f-d92b-4910-b43a-96d18f952c69/1R7A2578.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" />
             <img src="https://img1.wsimg.com/isteam/ip/71f1264f-d92b-4910-b43a-96d18f952c69/DSCN4558.JPG/:/rs=w:740,cg:true,m" />
-            <img src="https://img1.wsimg.com/isteam/ip/71f1264f-d92b-4910-b43a-96d18f952c69/DSCN4550.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" />
           </div>
         </section>
 
