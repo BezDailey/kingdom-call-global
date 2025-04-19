@@ -1,166 +1,30 @@
 import React from 'react';
-import * as Accordion from '@radix-ui/react-accordion';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
+    <div className="min-h-screen bg-light text-primary font-body flex flex-col">
       {/* Header */}
-      <header className="bg-white shadow py-6">
-        <h1 className="text-3xl font-bold text-center text-gray-800">
-          About React Boilerplate
-        </h1>
-      </header>
+      <Header />
 
       {/* Main Content */}
-      <main className="flex-grow container mx-auto px-4 py-10">
-        <Accordion.Root type="multiple" className="space-y-4">
-          {/* Overview Section */}
-          <Accordion.Item value="overview" className="bg-white rounded shadow">
-            <Accordion.Header className="px-4 py-2">
-              <Accordion.Trigger className="w-full text-left text-2xl font-semibold text-gray-700 focus:outline-none">
-                Overview
-              </Accordion.Trigger>
-            </Accordion.Header>
-            <Accordion.Content className="px-4 py-2 text-gray-700 border-t">
-              This repository serves as a boilerplate for React projects,
-              providing a clean and scalable starting point using modern tools
-              and best practices. It is designed with Vite for fast development,
-              Tailwind CSS for styling, React Router for client-side routing,
-              and Radix UI for accessible, headless component primitives.
-            </Accordion.Content>
-          </Accordion.Item>
+      <main className="flex-grow w-full">
+        {/* Our Mission */}
+        <section className="bg-primary px-2 mx-auto grid gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
+          <h1 className="font-heading text-white text-xl pb-2">Our Mission</h1>
+          <p className="text-white">Our mission is to unite the disciples of Jesus Christ and usher in the manifestation of the Kingdom of God. Our goal is simple yet profound: to collaborate with spiritual leaders across communities, fostering unity and implementing transformative ideas for the greater good. Together, we strive to bring about positive change, empowering individuals and communities to embody the values of love, compassion, and justice. Join us on this inspiring journey towards collective growth and the realization of God's Kingdom on Earth.</p>
+        </section>
 
-          {/* Features Section */}
-          <Accordion.Item value="features" className="bg-white rounded shadow">
-            <Accordion.Header className="px-4 py-2">
-              <Accordion.Trigger className="w-full text-left text-2xl font-semibold text-gray-700 focus:outline-none">
-                Features
-              </Accordion.Trigger>
-            </Accordion.Header>
-            <Accordion.Content className="px-4 py-2 text-gray-700 border-t">
-              <ul className="list-disc list-inside">
-                <li>
-                  <strong>Vite:</strong> A fast and modern build tool for React
-                  applications.
-                </li>
-                <li>
-                  <strong>Tailwind CSS:</strong> A utility-first CSS framework
-                  for rapid UI development.
-                </li>
-                <li>
-                  <strong>React Router:</strong> A robust solution for handling
-                  client-side routing.
-                </li>
-                <li>
-                  <strong>ESLint & Prettier:</strong> Tools for maintaining code
-                  quality and consistency.
-                </li>
-                <li>
-                  <strong>Radix UI:</strong> A collection of unstyled,
-                  accessible UI primitives that allow you to build custom
-                  components with full control over styling using Tailwind CSS.
-                </li>
-              </ul>
-            </Accordion.Content>
-          </Accordion.Item>
-
-          {/* Folder Structure Section */}
-          <Accordion.Item
-            value="folder-structure"
-            className="bg-white rounded shadow"
-          >
-            <Accordion.Header className="px-4 py-2">
-              <Accordion.Trigger className="w-full text-left text-2xl font-semibold text-gray-700 focus:outline-none">
-                Folder Structure
-              </Accordion.Trigger>
-            </Accordion.Header>
-            <Accordion.Content className="px-4 py-2 text-gray-700 border-t">
-              <pre className="bg-gray-200 p-4 rounded text-sm overflow-x-auto">
-                {`my-react-boilerplate/
-├── public/
-│   └── index.html
-├── src/
-│   ├── assets/              # Images, fonts, icons, etc.
-│   ├── components/          # Reusable UI components (e.g., Button.jsx, Card.jsx)
-│   ├── hooks/               # Custom React hooks
-│   ├── pages/               # Page-level components for different routes
-│   ├── routes/              # Routing configuration (e.g., RouteWrapper.jsx, routes.js)
-│   ├── styles/              # Global styles and Tailwind CSS configuration
-│   │   ├── index.css        # Main CSS file importing Tailwind's directives
-│   │   └── tailwind.css     # Optionally keep a dedicated file for Tailwind overrides
-│   ├── App.jsx              # Main App component
-│   └── main.jsx             # Entry point for Vite
-├── .eslintrc.js             # ESLint configuration file
-├── .prettierrc              # Prettier configuration file
-├── tailwind.config.js       # Tailwind CSS configuration file
-├── postcss.config.js        # PostCSS configuration (needed for Tailwind)
-├── package.json             # Project manifest
-├── vite.config.js           # Vite configuration file
-└── README.md                # Project documentation`}
-              </pre>
-            </Accordion.Content>
-          </Accordion.Item>
-
-          {/* Configuration Details Section */}
-          <Accordion.Item
-            value="configuration"
-            className="bg-white rounded shadow"
-          >
-            <Accordion.Header className="px-4 py-2">
-              <Accordion.Trigger className="w-full text-left text-2xl font-semibold text-gray-700 focus:outline-none">
-                Configuration Details
-              </Accordion.Trigger>
-            </Accordion.Header>
-            <Accordion.Content className="px-4 py-2 text-gray-700 border-t">
-              The project uses Vite as its build tool, integrated with Tailwind
-              CSS for styling, and React Router for navigation. ESLint and
-              Prettier are configured to ensure high code quality and consistent
-              formatting.
-            </Accordion.Content>
-          </Accordion.Item>
-
-          {/* Future Enhancements Section */}
-          <Accordion.Item
-            value="enhancements"
-            className="bg-white rounded shadow"
-          >
-            <Accordion.Header className="px-4 py-2">
-              <Accordion.Trigger className="w-full text-left text-2xl font-semibold text-gray-700 focus:outline-none">
-                Future Enhancements
-              </Accordion.Trigger>
-            </Accordion.Header>
-            <Accordion.Content className="px-4 py-2 text-gray-700 border-t">
-              Future improvements include expanded testing capabilities with
-              Jest and React Testing Library, additional custom hooks and
-              utilities, a CI/CD pipeline, and enhanced documentation with
-              examples and usage guides.
-            </Accordion.Content>
-          </Accordion.Item>
-
-          {/* Contributing Section */}
-          <Accordion.Item
-            value="contributing"
-            className="bg-white rounded shadow"
-          >
-            <Accordion.Header className="px-4 py-2">
-              <Accordion.Trigger className="w-full text-left text-2xl font-semibold text-gray-700 focus:outline-none">
-                Contributing
-              </Accordion.Trigger>
-            </Accordion.Header>
-            <Accordion.Content className="px-4 py-2 text-gray-700 border-t">
-              Contributions are welcome! If you have ideas or improvements,
-              please open an issue or submit a pull request.
-            </Accordion.Content>
-          </Accordion.Item>
-        </Accordion.Root>
+        {/* Our Story */}
+        <section className="px-2 mx-auto grid gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
+          <h1 className="font-heading text-xl pb-2">Our Story</h1>
+          <p>Kingdom Call Global began as a vision to unify and amplify the voices of ministries across the world. Born from a passion for outreach, discipleship, and digital connection, our journey started with a simple goal: to create a central platform where ministries could share their mission, partner with others, and reach the nations with the Gospel. From local gatherings to international partnerships, we’ve grown into a thriving network driven by faith, collaboration, and a deep desire to see lives transformed by the love of Christ. Every event, every connection, and every story shared here is a testament to the power of unity in the Kingdom of God.</p>
+        </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-white py-4 shadow">
-        <p className="text-center text-gray-600">
-          &copy; {new Date().getFullYear()} Jabez Dailey
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 };
