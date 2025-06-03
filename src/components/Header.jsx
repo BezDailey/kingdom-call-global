@@ -19,11 +19,14 @@ const Header = () => {
         <div className="flex text-sm flex-row justify-center gap-4 font-body lg:my-auto lg:text-xs lg:gap-2">
           <Link className="hover:text-primary" to="/">Home</Link>
           <Link className="hover:text-primary" to='/about'>About</Link>
-          <Link className="text-gray-400 cursor-not-allowed">Events</Link>
+          <Link className="hover:text-primary" to='/gallary'>Gallary</Link>
+          {/*
+          <Link className="hover:text-primary" to='/events'>Events</Link>
           <Link className="text-gray-400 cursor-not-allowed">Past Events</Link>
           <Link className="text-gray-400 cursor-not-allowed">Partnerships</Link>
           <Link className="text-gray-400 cursor-not-allowed">Ministries</Link>
           <Link className="text-gray-400 cursor-not-allowed">Contact</Link>
+          */}
         </div>
       </header>
 
@@ -40,11 +43,14 @@ const Header = () => {
         <nav className="md:hidden flex flex-col bg-light py-2 px-4 text-sm font-body">
           <Link className="py-1 hover:text-primary" to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
           <Link className="py-1 hover:text-primary" to="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
-          <Link className="py-1 text-gray-400 cursor-not-allowed" onClick={() => setMobileMenuOpen(false)}>Events</Link>
+          <Link className="py-1 hover:text-primary" to="/gallary" onClick={() => setMobileMenuOpen(false)}>Gallary</Link>
+          {/*
+          <Link className="py-1 hover:text-primary" to="/events" onClick={() => setMobileMenuOpen(false)}>Events</Link>
           <Link className="py-1 text-gray-400 cursor-not-allowed" onClick={() => setMobileMenuOpen(false)}>Past Events</Link>
           <Link className="py-1 text-gray-400 cursor-not-allowed" onClick={() => setMobileMenuOpen(false)}>Partnerships</Link>
           <Link className="py-1 text-gray-400 cursor-not-allowed" onClick={() => setMobileMenuOpen(false)}>Ministries</Link>
           <Link className="py-1 text-gray-400 cursor-not-allowed" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+          */}
         </nav>
       )}
     </>
