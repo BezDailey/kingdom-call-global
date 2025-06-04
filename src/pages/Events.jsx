@@ -3,12 +3,14 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import UnityPoster from '../../public/unity-poster.jpeg';
 import Button from '../components/Button';
+import UnityFestivalBanner from '../components/UnityFestivalBanner';
 
 const Events = () => {
   return (
     <div className="min-h-screen bg-light text-primarytext font-body flex flex-col">
       {/* Header */}
       <Header />
+      <UnityFestivalBanner />
 
       {/* Main Content */}
       <main className="grid grid-cols-2">

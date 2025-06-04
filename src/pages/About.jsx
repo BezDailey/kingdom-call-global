@@ -3,12 +3,14 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HeaderLanguages from '../../public/header-languages.jpeg';
 import AboutOurStory from '../../public/about-our-story.jpg';
+import UnityFestivalBanner from '../components/UnityFestivalBanner';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-light text-primary font-body flex flex-col">
       {/* Header */}
       <Header />
+      <UnityFestivalBanner />
 
       {/* Main Content */}
       <main className="flex-grow w-full">
