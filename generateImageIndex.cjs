@@ -1,32 +1,44 @@
-// generateImageIndex.js
 const fs = require('fs');
 const path = require('path');
 
-// Path to your public images folder
-const imagesDir = path.join(__dirname, 'public', 'gallery');
+// === CONFIGURATION ===
+const githubUsername = 'BezDailey';
+const repoName = 'kingdom-call-global';
+const branch = 'main';
+const subfolder = 'gallery'; // Folder where your images live
 
-// Output JSON file path
-const outputPath = path.join(imagesDir, 'index.json');
+// Local folder path (relative to this script)
+const imagesDir = path.join(__dirname, subfolder);
 
-// Allowed image extensions
+// Output JSON path (in your deployed public folder)
+const outputPath = path.join(__dirname, 'public', 'gallery', 'index.json');
+
+// Valid image file extensions
 const validExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.JPG'];
+
+// Generate jsDelivr base URL
+const cdnBase = `https://cdn.jsdelivr.net/gh/${githubUsername}/${repoName}@${branch}/${subfolder}/`;
 
 fs.readdir(imagesDir, (err, files) => {
   if (err) {
-    console.error('Error reading images directory:', err);
+    console.error('❌ Error reading image directory:', err);
     return;
   }
 
-  // Filter image files only
-  const imageFiles = files.filter(file => validExtensions.includes(path.extname(file).toLowerCase()));
+  // Filter for valid image files
+  const imageFiles = files.filter(file =>
+    validExtensions.includes(path.extname(file).toLowerCase())
+  );
 
-  // Write the array to index.json
-  fs.writeFile(outputPath, JSON.stringify(imageFiles, null, 2), (err) => {
+  // Generate full jsDelivr URLs
+  const imageUrls = imageFiles.map(file => cdnBase + encodeURIComponent(file));
+
+  // Write to index.json
+  fs.writeFile(outputPath, JSON.stringify(imageUrls, null, 2), err => {
     if (err) {
-      console.error('Error writing index.json:', err);
+      console.error('❌ Error writing index.json:', err);
     } else {
-      console.log(`✅ index.json created with ${imageFiles.length} images.`);
+      console.log(`✅ index.json created with ${imageUrls.length} CDN URLs.`);
     }
   });
 });
-
