@@ -5,7 +5,7 @@ const path = require('path');
 const githubUsername = 'BezDailey';
 const repoName = 'kingdom-call-global';
 const branch = 'main';
-const subfolder = 'gallery'; // Folder where your images live
+const subfolder = 'public-gallery'; // Folder where your images live
 
 // Local folder path (relative to this script)
 const imagesDir = path.join(__dirname, subfolder);
