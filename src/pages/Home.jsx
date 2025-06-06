@@ -8,6 +8,16 @@ import UnityFestivalBanner from '../components/UnityFestivalBanner';
 
 // Importing images for the header
 import header from '../../public/header-banner.jpg';
+import home1 from '../../public/home_1.jpg';
+import home2 from '../../public/home_2.jpg';
+import home3 from '../../public/home_3.jpg';
+import home4 from '../../public/home_4.jpg';
+import home5 from '../../public/home_5.jpg';
+import home6 from '../../public/home_6.jpg';
+import home7 from '../../public/home_7.jpg';
+import home8 from '../../public/home_8.jpg';
+
+// Home component
 
 const Home = () => {
   return (
@@ -53,14 +63,15 @@ const Home = () => {
         {/* Gallary */}
         <section className="px-2 mx-auto grid gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
           {/* <h2 className="font-heading text-xl pb-2">Gallary</h2> */}
-          <div className='grid grid-cols-1 gap-4 pt-4 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4'>
-            <img src="https://img1.wsimg.com/isteam/ip/71f1264f-d92b-4910-b43a-96d18f952c69/1R7A2580.jpg/:/rs=w:740,cg:true,m" />
-            <img src="https://img1.wsimg.com/isteam/ip/71f1264f-d92b-4910-b43a-96d18f952c69/DSCN4541.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" />
-            <img src="https://img1.wsimg.com/isteam/ip/71f1264f-d92b-4910-b43a-96d18f952c69/1R7A2582.jpg/:/cr=t:0%25,l:5.55%25,w:88.91%25,h:88.91%25/rs=w:740,cg:true,m" />
-            <img src="https://img1.wsimg.com/isteam/ip/71f1264f-d92b-4910-b43a-96d18f952c69/1R7A2573.jpg/:/rs=w:740,cg:true,m" />
-            <img src="https://img1.wsimg.com/isteam/ip/71f1264f-d92b-4910-b43a-96d18f952c69/DSCN4532.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" />
-            <img src="https://img1.wsimg.com/isteam/ip/71f1264f-d92b-4910-b43a-96d18f952c69/1R7A2578.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" />
-            <img src="https://img1.wsimg.com/isteam/ip/71f1264f-d92b-4910-b43a-96d18f952c69/DSCN4558.JPG/:/rs=w:740,cg:true,m" />
+          <div className='columns-1 gap-4 pt-4 md:columns-2 lg:columns-3 xl:columns-4'>
+            <img src={home1} className="w-full mb-4" />
+            <img src={home2} className="w-full mb-4" />
+            <img src={home3} className="w-full mb-4" />
+            <img src={home4} className="w-full mb-4" />
+            <img src={home5} className="w-full mb-4" />
+            <img src={home6} className="w-full mb-4" />
+            <img src={home7} className="w-full mb-4" />
+            <img src={home8} className="w-full mb-4" />
           </div>
         </section>
 

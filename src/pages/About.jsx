@@ -24,17 +24,20 @@ const About = () => {
         </section>
 
         {/* Our Story */}
-        <section className="px-2 mx-auto grid grid-cols-2 gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
+        <section className="px-2 mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
           <img src={AboutOurStory} />
           <div>
             <h1 className="font-heading text-xl pb-2">Our Story</h1>
-            <p>My name is Pastor Tina Bivins-Robinson, Founder and CEO of Kingdom Call Global, Inc. I am reaching out to introduce myself and to share some information about our global
+            <p className="font-body pb-1">My name is Pastor Tina Bivins-Robinson, Founder and CEO of Kingdom Call Global, Inc. I am reaching out to introduce myself and to share some information about our global
 movement. Born and raised in Miami, I embarked on a transformative journey in the fall of 1993 when I moved to Tampa to attend the University of South Florida. On this journey, I experienced life as a college student and matured to a wife and mother of two. Along the way, I honed various talents as I pursued careers in different
 industries. I earned an MBA from the University of Miami and a Juris Doctorate from Western Michigan University Thomas M. Cooley Law School.</p>
-<p>Throughout, I have weathered periods of loss, sorrow, and disappointment, and have also embraced times of love, healing, deliverance, and ultimately the discovery of my purpose. In 2013, guided by the Holy Spirit, I was moved to
+<p className="font-body pb-1">Throughout, I have weathered periods of loss, sorrow, and disappointment, and have also embraced times of love, healing, deliverance, and ultimately the discovery of my purpose. In 2013, guided by the Holy Spirit, I was moved to
 establish Kingdom Call Global, an organization that unites spiritual leaders from various faiths worldwide. Following deep prayer and thoughtful consultation, Kingdom Call Global was founded with a holy mission: "Uniting the disciples of Jesus Christ to bring manifestation of the Kingdom of God. " I am a firm believer in unity;
 together, we can strengthen our collective voice and influence to address the pressing challenges our communities and society face. My goal is to foster respectful dialogue among spiritual leaders, promote joint efforts on projects, and most importantly, oversee the implementation of programs that provide significant benefits to the communities
 we serve.</p>
+<p className="font-body pb-1">
+  With our united efforts, we can create a profound and enduring impact on the lives of those we are called to serve, embodying the teachings of God's Word and demonstrating His love, compassion, and justice. This year marks the  11th anniversary of our organization. While we have consistently hosted our annual luncheon to expand our network, we are now thrilled to embark on tangible community projects. Your wisdom, experience, and unique perspective are vital to this sacred mission, whether you're a Pastor, Apostle, Rabbi, Imam, Spiritual Teacher, or community leader. We would be honored to have you join us in the crucial endeavor of fortifying our community. Thus, I extend an invitation to you to partner with Kingdom Call Global, Inc., and join our expanding circle of influential leaders.
+</p>
           </div>
         </section>
       </main>
