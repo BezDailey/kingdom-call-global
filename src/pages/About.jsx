@@ -28,7 +28,13 @@ const About = () => {
           <img src={AboutOurStory} />
           <div>
             <h1 className="font-heading text-xl pb-2">Our Story</h1>
-            <p>Kingdom Call Global began as a vision to unify and amplify the voices of ministries across the world. Born from a passion for outreach, discipleship, and digital connection, our journey started with a simple goal: to create a central platform where ministries could share their mission, partner with others, and reach the nations with the Gospel. From local gatherings to international partnerships, we’ve grown into a thriving network driven by faith, collaboration, and a deep desire to see lives transformed by the love of Christ. Every event, every connection, and every story shared here is a testament to the power of unity in the Kingdom of God.</p>
+            <p>My name is Pastor Tina Bivins-Robinson, Founder and CEO of Kingdom Call Global, Inc. I am reaching out to introduce myself and to share some information about our global
+movement. Born and raised in Miami, I embarked on a transformative journey in the fall of 1993 when I moved to Tampa to attend the University of South Florida. On this journey, I experienced life as a college student and matured to a wife and mother of two. Along the way, I honed various talents as I pursued careers in different
+industries. I earned an MBA from the University of Miami and a Juris Doctorate from Western Michigan University Thomas M. Cooley Law School.</p>
+<p>Throughout, I have weathered periods of loss, sorrow, and disappointment, and have also embraced times of love, healing, deliverance, and ultimately the discovery of my purpose. In 2013, guided by the Holy Spirit, I was moved to
+establish Kingdom Call Global, an organization that unites spiritual leaders from various faiths worldwide. Following deep prayer and thoughtful consultation, Kingdom Call Global was founded with a holy mission: "Uniting the disciples of Jesus Christ to bring manifestation of the Kingdom of God. " I am a firm believer in unity;
+together, we can strengthen our collective voice and influence to address the pressing challenges our communities and society face. My goal is to foster respectful dialogue among spiritual leaders, promote joint efforts on projects, and most importantly, oversee the implementation of programs that provide significant benefits to the communities
+we serve.</p>
           </div>
         </section>
       </main>
