@@ -20,28 +20,28 @@ import home8 from '../../public/home_8.jpg';
 // Home component
 
 const Home = () => {
-  return (
-    <div className="min-h-screen bg-light text-primarytext font-body flex flex-col">
-      {/* Header */}
-      <Header />
-      <UnityFestivalBanner />
+	return (
+		<div className="min-h-screen bg-light text-primarytext font-body flex flex-col">
+			{/* Header */}
+			<Header />
+			<UnityFestivalBanner />
 
-      {/* Main Content */}
-      <main className="flex-grow w-full">
-        {/* Hero */}
-        <section
-        className="relative w-full flex flex-col items-center bg-center bg-no-repeat py-8 h-96 justify-center px-2 md:px-6 lg:px-2 xl:px-16 2xl:px-24"
-          style={{ 
-            backgroundImage: `url(${header})`,
-            backgroundSize: '100% 100%',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center'
-          }}
-        >
-        </section>
+			{/* Main Content */}
+			<main className="flex-grow w-full">
+				{/* Hero */}
+				<section
+					className="relative w-full flex flex-col items-center bg-center bg-no-repeat py-8 h-96 justify-center px-2 md:px-6 lg:px-2 xl:px-16 2xl:px-24"
+					style={{
+						backgroundImage: `url(${header})`,
+						backgroundSize: '100% 100%',
+						backgroundRepeat: 'no-repeat',
+						backgroundPosition: 'center'
+					}}
+				>
+				</section>
 
-        {/* Featured Ministries */}
-        {/*
+				{/* Featured Ministries */}
+				{/*
         <section className="px-2 mx-auto grid gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
           <h2 className="font-heading text-xl pb-2">Featured Ministries</h2>
           <SearchBar />
@@ -54,33 +54,33 @@ const Home = () => {
         </section>
         */}
 
-        {/* Mission */}
-        <section className="px-2 bg-primary mx-auto grid gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
-          <h2 className="font-heading text-xl pb-2 text-white">Mission</h2>
-          <p className='text-white'>Our mission is to unite the disciples of Jesus Christ and usher in the manifestation of the Kingdom of God. Our goal is simple yet profound: to collaborate with spiritual leaders across communities, fostering unity and implementing transformative ideas for the greater good. Together, we strive to bring about positive change, empowering individuals and communities to embody the values of love, compassion, and justice. Join us on this inspiring journey towards collective growth and the realization of God's Kingdom on Earth.</p>
-        </section>
+				{/* Mission */}
+				<section className="px-2 bg-primary mx-auto grid gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
+					<h2 className="font-heading text-xl pb-2 text-white">Mission</h2>
+					<p className='text-white'>Our mission is to unite the disciples of Jesus Christ and usher in the manifestation of the Kingdom of God. Our goal is simple yet profound: to collaborate with spiritual leaders across communities, fostering unity and implementing transformative ideas for the greater good. Together, we strive to bring about positive change, empowering individuals and communities to embody the values of love, compassion, and justice. Join us on this inspiring journey towards collective growth and the realization of God's Kingdom on Earth.</p>
+				</section>
 
-        {/* Gallary */}
-        <section className="px-2 mx-auto grid gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
-          {/* <h2 className="font-heading text-xl pb-2">Gallary</h2> */}
-          <div className='columns-1 gap-4 pt-4 md:columns-2 lg:columns-3 xl:columns-4'>
-            <img src={home1} className="w-full mb-4" />
-            <img src={home2} className="w-full mb-4" />
-            <img src={home3} className="w-full mb-4" />
-            <img src={home4} className="w-full mb-4" />
-            <img src={home5} className="w-full mb-4" />
-            <img src={home6} className="w-full mb-4" />
-            <img src={home7} className="w-full mb-4" />
-            <img src={home8} className="w-full mb-4" />
-          </div>
-        </section>
+				{/* Gallary */}
+				<section className="px-2 mx-auto grid gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
+					{/* <h2 className="font-heading text-xl pb-2">Gallary</h2> */}
+					<div className='columns-1 gap-4 pt-4 md:columns-2 lg:columns-3 xl:columns-4'>
+						<img src={home1} className="w-full mb-4" />
+						<img src={home2} className="w-full mb-4" />
+						<img src={home3} className="w-full mb-4" />
+						<img src={home4} className="w-full mb-4" />
+						<img src={home5} className="w-full mb-4" />
+						<img src={home6} className="w-full mb-4" />
+						<img src={home7} className="w-full mb-4" />
+						<img src={home8} className="w-full mb-4" />
+					</div>
+				</section>
 
-      </main>
+			</main>
 
-      {/* Footer */}
-      <Footer />
-    </div>
-  );
+			{/* Footer */}
+			<Footer />
+		</div>
+	);
 };
 
 export default Home;
