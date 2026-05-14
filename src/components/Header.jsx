@@ -83,9 +83,9 @@ const Header = () => {
           </Link>
           <Link
             className="hover:text-accentdark transition-colors"
-            to="/unity2025"
+            to="/unity2026"
           >
-            Unity 2025
+            Unity 2026
           </Link>
           {/* Partnership Dropdown */}
           <div
@@ -145,36 +145,36 @@ const Header = () => {
       {mobileMenuOpen && (
         <nav className="md:hidden flex flex-col bg-light py-2 px-4 text-sm font-body">
           <Link
-            className="py-1 hover:text-primary"
+            className="py-1 hover:text-accentdark transition-colors"
             to="/"
             onClick={() => setMobileMenuOpen(false)}
           >
             Home
           </Link>
           <Link
-            className="py-1 hover:text-primary"
+            className="py-1 hover:text-accentdark transition-colors"
             to="/about"
             onClick={() => setMobileMenuOpen(false)}
           >
             About
           </Link>
           <Link
-            className="py-1 hover:text-primary"
+            className="py-1 hover:text-accentdark transition-colors"
             to="/gallery"
             onClick={() => setMobileMenuOpen(false)}
           >
             Gallery
           </Link>
           <Link
-            className="py-1 hover:text-primary"
-            to="/unity2025"
+            className="py-1 hover:text-accentdark transition-colors"
+            to="/unity2026"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Unity Festival
+            Unity 2026
           </Link>
           {/* Partnership Dropdown for Mobile */}
           <details>
-            <summary className="py-1 hover:text-primary cursor-pointer">
+            <summary className="py-1 hover:text-accentdark transition-colors cursor-pointer">
               Partnership
             </summary>
             <div className="pl-4">
@@ -182,7 +182,7 @@ const Header = () => {
                 <Link
                   key={church.name}
                   /*to={church.path}*/
-                  className="block py-1 hover:text-primary"
+                  className="block py-1 hover:text-accentdark transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {church.name}

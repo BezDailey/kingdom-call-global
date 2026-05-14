@@ -13,14 +13,14 @@ const Footer = () => {
         Matthew 28:19
       </p>
       <p
-        className="kc-tagline"
+        className="kc-tagline kc-tagline--white"
         style={{
-          color: 'rgba(255,255,255,0.45)',
           borderTop: '1px solid rgba(200,152,26,0.3)',
           paddingTop: '12px',
         }}
       >
-        Copyright &copy; 2024 Kingdom Call Global &mdash; All Rights Reserved
+        Copyright &copy; {new Date().getFullYear()} Kingdom Call Global &mdash;
+        All Rights Reserved
       </p>
     </footer>
   );

@@ -33,7 +33,11 @@ const About = () => {
               God&apos;s Kingdom on Earth.
             </p>
           </div>
-          <img src={HeaderLanguages} className="w-full object-cover rounded" />
+          <img
+            src={HeaderLanguages}
+            alt="Kingdom Call Global unity in languages"
+            className="w-full object-cover rounded"
+          />
         </section>
 
         {/* Divider */}
@@ -44,8 +48,12 @@ const About = () => {
         </div>
 
         {/* Our Story */}
-        <section className="px-2 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-12 lg:pb-16 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
-          <img src={AboutOurStory} className="w-full object-cover rounded" />
+        <section className="kc-bg-white px-2 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-12 lg:pb-16 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
+          <img
+            src={AboutOurStory}
+            alt="Pastor Tina Bivins-Robinson, Founder of Kingdom Call Global"
+            className="w-full object-cover rounded"
+          />
           <div className="flex flex-col justify-center">
             <h1 className="kc-display pb-4">Our Story</h1>
             <p className="kc-body pb-3">

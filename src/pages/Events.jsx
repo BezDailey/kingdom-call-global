@@ -22,7 +22,7 @@ const Events = () => {
               Come experience a day of powerful worship, life-changing word,
               inspiring ministries, great food, and fun for the entire family!
             </div>
-            <a className="kc-btn kc-btn--gold" href="#">
+            <a className="kc-btn kc-btn--gold" href="/unity2026">
               Register Now
             </a>
           </div>
@@ -57,7 +57,24 @@ const Events = () => {
               <div className="kc-event-strip__sublabel">Location</div>
               <div className="kc-event-strip__value">
                 Tampa Water Works Park
+                <br />
+                <span
+                  style={{
+                    fontSize: '10px',
+                    fontWeight: 400,
+                    color: 'var(--kc-text-muted)',
+                  }}
+                >
+                  1701 N. Highland Avenue, Tampa, FL 33602
+                </span>
               </div>
+            </div>
+          </div>
+          <div className="kc-event-strip__cell">
+            <div className="kc-event-strip__icon">&#128222;</div>
+            <div>
+              <div className="kc-event-strip__sublabel">Contact</div>
+              <div className="kc-event-strip__value">(813) 369-9618</div>
             </div>
           </div>
         </div>

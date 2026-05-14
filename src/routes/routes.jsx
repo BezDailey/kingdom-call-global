@@ -4,7 +4,7 @@ import About from '../pages/About';
 import ComponentLibrary from '../pages/ComponentLibrary';
 import Events from '../pages/Events';
 import Gallery from '../pages/Gallery';
-import Unity2025 from '../pages/Unity2025';
+import Unity2026 from '../pages/Unity2026';
 
 const routes = [
   {
@@ -25,8 +25,8 @@ const routes = [
     element: <Gallery />,
   },
   {
-    path: '/unity2025',
-    element: <Unity2025 />,
+    path: '/unity2026',
+    element: <Unity2026 />,
   },
 ];
 
