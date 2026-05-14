@@ -379,7 +379,7 @@ const Unity2026 = () => {
               </div>
             </div>
             <a
-              href="mailto:kingdomcallglobal@gmail.com"
+              href="mailto:pastortina@kingdomcallglobal.com"
               className="kc-btn kc-btn--gold"
               style={{ flexShrink: 0 }}
             >

@@ -244,7 +244,7 @@ const Partnership = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
               <a
                 className="kc-btn kc-btn--gold"
-                href="mailto:kingdomcallglobal@gmail.com"
+                href="mailto:pastortina@kingdomcallglobal.com"
               >
                 Partner With Us
               </a>

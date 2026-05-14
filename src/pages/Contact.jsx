@@ -13,8 +13,8 @@ const contactItems = [
   {
     icon: '✉️',
     label: 'Email',
-    value: 'kingdomcallglobal@gmail.com',
-    href: 'mailto:kingdomcallglobal@gmail.com',
+    value: 'pastortina@kingdomcallglobal.com',
+    href: 'mailto:pastortina@kingdomcallglobal.com',
   },
   {
     icon: '📍',
@@ -105,7 +105,7 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
               <a
                 className="kc-btn kc-btn--gold"
-                href="mailto:kingdomcallglobal@gmail.com"
+                href="mailto:pastortina@kingdomcallglobal.com"
               >
                 Send Us an Email
               </a>
