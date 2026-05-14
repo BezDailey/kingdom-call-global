@@ -24,20 +24,40 @@ No test suite is currently configured.
 
 Routes are defined as a declarative array in `src/routes/routes.jsx` and consumed in `src/App.jsx` via React Router DOM 7. To add a page: create the component in `src/pages/`, import it in `routes.jsx`, and add an entry to the routes array.
 
+Current routes:
+
+| Path | Page |
+|---|---|
+| `/` | Home |
+| `/about` | About |
+| `/gallery` | Gallery |
+| `/unity2026` | Unity 2026 |
+| `/partnership` | Partnership |
+| `/events` | Events |
+| `/components` | ComponentLibrary (dev only) |
+
 ### State
 
-No global state library. All state is local React hooks (`useState`/`useEffect`) within components. Countdown timers live in `UnityFestivalBanner.jsx`; mobile menu/dropdown state lives in `Header.jsx`.
+No global state library. All state is local React hooks (`useState`/`useEffect`) within components. Countdown timer lives in `UnityFestivalBanner.jsx`; mobile menu state lives in `Header.jsx`.
 
 ### Styling
 
 Two styling layers coexist:
 
 **1. Tailwind CSS** — utility-first, used for layout, spacing, and responsive behavior. Custom theme in `tailwind.config.js`:
-- Primary color: `#00425F` (deep blue)
-- Accent: `#F6F2CB` (gold)
-- Fonts: Merriweather (headings), Inter (body) — loaded from Google Fonts in `index.html`
 
-**2. Design System** (brand-authoritative) — defined in `src/styles/tokens.css` and `src/styles/components.css`, imported first in `main.jsx`. Use these for any new brand UI. See `DESIGN_SYSTEM.md` (not checked in) for full documentation.
+| Token | Value | Maps to |
+|---|---|---|
+| `bg-primary` / `text-primary` | `#0D1B5C` | `--kc-navy` |
+| `bg-primarylight` | `#1A2A72` | `--kc-navy-mid` |
+| `text-primarytext` | `#2A2A2A` | `--kc-text-body` |
+| `bg-accent` | `#F5E4B0` | `--kc-gold-pale` |
+| `text-accentdark` / `bg-accentdark` | `#C8981A` | `--kc-gold` |
+| `bg-light` | `#F7F4ED` | `--kc-off-white` |
+| `font-heading` | Georgia, serif | `--kc-font-display` |
+| `font-body` | system-ui, sans-serif | `--kc-font-body` |
+
+**2. Design System** (brand-authoritative) — defined in `src/styles/tokens.css` and `src/styles/components.css`, imported first in `main.jsx`. Use these for any new brand UI.
 
 - **Tokens** (`tokens.css`): CSS custom properties for color, type scale, spacing, radii, shadows, transitions.
 - **Components** (`components.css`): pre-built class-based components — use these instead of reimplementing from scratch.
@@ -81,7 +101,7 @@ Two styling layers coexist:
 
 ### Assets
 
-Static images live in `/public`. Gallery images are in `/public-gallery`. Images are referenced by path string (not imported as modules).
+Static images live in `/public`. Logos: `logo-white.png` (for dark/navy backgrounds), `logo-transparent.png` (for light backgrounds, used in `HeroBanner`). Gallery images are served from `/public/gallery/` and indexed in `/public/gallery/index.json`. Images imported as modules are used in pages; gallery images are fetched at runtime via the JSON index.
 
 ## Style Guide
 
@@ -93,22 +113,21 @@ Enforced by Prettier (`prettier.config.js`): single quotes, trailing commas, 2-s
 
 - Functional components only, default-exported at the bottom of the file.
 - Data arrays/objects used only by one component are defined at module level (outside the component), not inline in JSX.
-- Event handlers are named `handleX` (e.g., `handleDropdownMouseEnter`) or `toggleX` for boolean flippers (e.g., `toggleMobileMenu`).
+- Event handlers are named `handleX` (e.g., `handleKeyDown`) or `toggleX` for boolean flippers (e.g., `toggleMobileMenu`).
 - Destructure props; use rest/spread for pass-through to native elements (see `Button.jsx`).
 - No PropTypes or TypeScript — plain `.jsx` files throughout.
 
 ### Pages vs. components
 
-- **Pages** (`src/pages/`) own the full page layout: they render `<Header>`, a `<main>` or wrapper, and `<Footer>`. Top-level wrapper is typically `<div className="min-h-screen bg-light flex flex-col">`.
+- **Pages** (`src/pages/`) own the full page layout: they render `<Header>`, `<UnityFestivalBanner>`, a `<main>`, and `<Footer>`. Top-level wrapper is typically `<div className="min-h-screen bg-light flex flex-col">`.
 - **Components** (`src/components/`) are reusable UI pieces with no Header/Footer. Keep them focused.
 
 ### Tailwind conventions
 
 - Mobile-first responsive classes: `hidden md:flex`, `px-4 md:px-6 lg:px-12`.
-- Use custom theme tokens — `bg-primary`, `text-primary`, `bg-light`, `font-heading`, `font-body` — rather than raw hex values.
-- Dynamic values (e.g., background images) use inline `style` prop; everything else is Tailwind utility classes.
-- Section-level JSX blocks get a comment label: `{/* Desktop Header */}`, `{/* Mission Section */}`.
-- Mobile-only nav uses native `<details>`/`<summary>` instead of custom JS toggle logic.
+- Use custom theme tokens (`bg-primary`, `text-accentdark`, `bg-light`, `font-heading`, `font-body`) rather than raw hex values.
+- Dynamic values (e.g., carousel transforms) use inline `style` prop; everything else is Tailwind utility classes.
+- Section-level JSX blocks get a comment label: `{/* Hero */}`, `{/* Church Partners */}`.
 
 ### Imports
 
