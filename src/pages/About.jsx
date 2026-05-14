@@ -7,7 +7,7 @@ import UnityFestivalBanner from '../components/UnityFestivalBanner';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-light text-primary font-body flex flex-col">
+    <div className="min-h-screen bg-light text-primarytext font-body flex flex-col">
       {/* Header */}
       <Header />
       <UnityFestivalBanner />
@@ -17,7 +17,7 @@ const About = () => {
         {/* Our Mission */}
         <section className="bg-primary px-2 mx-auto grid grid-cols-2 gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
           <div>
-            <h1 className="font-heading text-white text-xl pb-2">Our Mission</h1>
+            <h1 className="font-heading text-white text-3xl pb-2">Our Mission</h1>
             <p className="text-white">Our mission is to unite the disciples of Jesus Christ and usher in the manifestation of the Kingdom of God. Our goal is simple yet profound: to collaborate with spiritual leaders across communities, fostering unity and implementing transformative ideas for the greater good. Together, we strive to bring about positive change, empowering individuals and communities to embody the values of love, compassion, and justice. Join us on this inspiring journey towards collective growth and the realization of God's Kingdom on Earth.</p>
           </div>
           <img src={HeaderLanguages} />
@@ -27,7 +27,7 @@ const About = () => {
         <section className="px-2 mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
           <img src={AboutOurStory} />
           <div>
-            <h1 className="font-heading text-xl pb-2">Our Story</h1>
+            <h1 className="font-heading text-3xl pb-2">Our Story</h1>
             <p className="font-body pb-1">My name is Pastor Tina Bivins-Robinson, Founder and CEO of Kingdom Call Global, Inc. I am reaching out to introduce myself and to share some information about our global
 movement. Born and raised in Miami, I embarked on a transformative journey in the fall of 1993 when I moved to Tampa to attend the University of South Florida. On this journey, I experienced life as a college student and matured to a wife and mother of two. Along the way, I honed various talents as I pursued careers in different
 industries. I earned an MBA from the University of Miami and a Juris Doctorate from Western Michigan University Thomas M. Cooley Law School.</p>

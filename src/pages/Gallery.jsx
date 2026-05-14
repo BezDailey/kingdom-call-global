@@ -28,8 +28,7 @@ const Gallery = () => {
                 key={i}
                 src={url}
                 alt={`Image ${i}`}
-                className="w-full mb-3 rounded"
-                style={{ display: 'block' }}
+                className="w-full mb-4 rounded block"
                 loading="lazy"
               />
             ))}

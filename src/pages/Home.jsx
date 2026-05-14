@@ -56,7 +56,7 @@ const Home = () => {
 
 				{/* Mission */}
 				<section className="px-2 bg-primary mx-auto grid gap-2 py-6 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
-					<h2 className="font-heading text-xl pb-2 text-white">Mission</h2>
+					<h2 className="font-heading text-3xl pb-2 text-white">Mission</h2>
 					<p className='text-white'>Our mission is to unite the disciples of Jesus Christ and usher in the manifestation of the Kingdom of God. Our goal is simple yet profound: to collaborate with spiritual leaders across communities, fostering unity and implementing transformative ideas for the greater good. Together, we strive to bring about positive change, empowering individuals and communities to embody the values of love, compassion, and justice. Join us on this inspiring journey towards collective growth and the realization of God's Kingdom on Earth.</p>
 				</section>
 

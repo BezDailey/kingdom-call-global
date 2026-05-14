@@ -16,8 +16,8 @@ const Events = () => {
       <main className="grid grid-cols-2">
         <div className="pt-10">
           <div className=" w-2/3 mx-auto flex flex-col bg-accent p-10 rounded justify-center text-center">
-            <p>Starts In:</p>
-            <h1>00:00:00</h1>
+            <p className="text-primarytext">Starts In:</p>
+            <h1 className="font-heading text-3xl text-primary py-2">00:00:00</h1>
             <Button type="outline">Sign up</Button>
           </div>
         </div>

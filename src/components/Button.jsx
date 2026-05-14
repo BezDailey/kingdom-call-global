@@ -11,10 +11,10 @@ const Button = ({type, children, ...props}) => {
       className += "border border-primary";
       break;
     case "secondary":
-      className += "bg-light"
+      className += "bg-light text-primary";
       break;
     case "accent":
-      className += "bg-accent"
+      className += "bg-accent text-primary";
       break;
     default:
       className += "";
