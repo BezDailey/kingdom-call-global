@@ -27,8 +27,9 @@ Official website for Kingdom Call Global Inc. — a ministry organization unitin
 | `/about` | About | Mission section, founder story |
 | `/gallery` | Gallery | Photo carousel with keyboard navigation |
 | `/unity2026` | Unity 2026 | 2nd Annual Unity Festival — full event info, partners, performers |
-| `/partnership` | Partnership | All partner churches + Become a Partner CTA |
-| `/events` | Events | Event invite card, poster, date/time/location strip |
+| `/partnership` | Partnership | All 15 partner churches + Become a Partner CTA |
+| `/contact` | Contact | Phone, email, location info + Get Involved CTA |
+| `*` | 404 | Not found page with link back to home |
 
 ---
 

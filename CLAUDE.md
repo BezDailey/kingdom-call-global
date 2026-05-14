@@ -33,12 +33,12 @@ Current routes:
 | `/gallery` | Gallery |
 | `/unity2026` | Unity 2026 |
 | `/partnership` | Partnership |
-| `/events` | Events |
-| `/components` | ComponentLibrary (dev only) |
+| `/contact` | Contact |
+| `*` | NotFound (404) |
 
 ### State
 
-No global state library. All state is local React hooks (`useState`/`useEffect`) within components. Countdown timer lives in `UnityFestivalBanner.jsx`; mobile menu state lives in `Header.jsx`.
+No global state library. All state is local React hooks (`useState`/`useEffect`) within components. Countdown timer lives in `UnityFestivalBanner.jsx`; mobile menu state lives in `Header.jsx`. Active nav state is derived from `useLocation()` — no state needed.
 
 ### Styling
 
@@ -101,7 +101,7 @@ Two styling layers coexist:
 
 ### Assets
 
-Static images live in `/public`. Logos: `logo-white.png` (for dark/navy backgrounds), `logo-transparent.png` (for light backgrounds, used in `HeroBanner`). Gallery images are served from `/public/gallery/` and indexed in `/public/gallery/index.json`. Images imported as modules are used in pages; gallery images are fetched at runtime via the JSON index.
+Static images live in `/public`. Logos: `logo-white.png` (for dark/navy backgrounds), `logo-transparent.png` (for light backgrounds, used in `HeroBanner` and as the favicon). Gallery images are served from `/public/gallery/` and indexed in `/public/gallery/index.json`. Images imported as modules are used in pages; gallery images are fetched at runtime via the JSON index.
 
 ## Style Guide
 
