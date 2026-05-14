@@ -1,12 +1,38 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
+
+const navLinks = [
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/about' },
+  { label: 'Gallery', path: '/gallery' },
+  { label: 'Unity 2026', path: '/unity2026' },
+  { label: 'Partnership', path: '/partnership' },
+  { label: 'Contact', path: '/contact' },
+];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const desktopLinkClass = (path) => {
+    const isActive = location.pathname === path;
+    return `transition-colors ${
+      isActive
+        ? 'text-accentdark font-semibold border-b border-accentdark pb-0.5'
+        : 'hover:text-accentdark'
+    }`;
+  };
+
+  const mobileLinkClass = (path) => {
+    const isActive = location.pathname === path;
+    return `py-1 transition-colors ${
+      isActive ? 'text-accentdark font-semibold' : 'hover:text-accentdark'
+    }`;
   };
 
   return (
@@ -19,79 +45,39 @@ const Header = () => {
           </h1>
         </div>
         <div className="flex text-sm flex-row justify-center gap-4 font-body lg:my-auto lg:text-sm lg:gap-6 relative">
-          <Link className="hover:text-accentdark transition-colors" to="/">
-            Home
-          </Link>
-          <Link className="hover:text-accentdark transition-colors" to="/about">
-            About
-          </Link>
-          <Link
-            className="hover:text-accentdark transition-colors"
-            to="/gallery"
-          >
-            Gallery
-          </Link>
-          <Link
-            className="hover:text-accentdark transition-colors"
-            to="/unity2026"
-          >
-            Unity 2026
-          </Link>
-          <Link
-            className="hover:text-accentdark transition-colors"
-            to="/partnership"
-          >
-            Partnership
-          </Link>
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              className={desktopLinkClass(link.path)}
+              to={link.path}
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
       </header>
 
       {/* Mobile Header */}
       <header className="md:hidden flex items-center justify-between w-full bg-light py-2 px-4">
         <h1 className="kc-display text-lg">KCG Inc.</h1>
-        <button onClick={toggleMobileMenu} aria-label="Toggle naviation">
+        <button onClick={toggleMobileMenu} aria-label="Toggle navigation">
           <HamburgerMenuIcon className="w-6 h-6" />
         </button>
       </header>
 
-      {/* Mobile Naviation Menu */}
+      {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
         <nav className="md:hidden flex flex-col bg-light py-2 px-4 text-sm font-body">
-          <Link
-            className="py-1 hover:text-accentdark transition-colors"
-            to="/"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Home
-          </Link>
-          <Link
-            className="py-1 hover:text-accentdark transition-colors"
-            to="/about"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            About
-          </Link>
-          <Link
-            className="py-1 hover:text-accentdark transition-colors"
-            to="/gallery"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Gallery
-          </Link>
-          <Link
-            className="py-1 hover:text-accentdark transition-colors"
-            to="/unity2026"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Unity 2026
-          </Link>
-          <Link
-            className="py-1 hover:text-accentdark transition-colors"
-            to="/partnership"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Partnership
-          </Link>
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              className={mobileLinkClass(link.path)}
+              to={link.path}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
       )}
     </>
