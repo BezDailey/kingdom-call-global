@@ -1,28 +1,19 @@
 import React from 'react';
 
-const Button = ({type, children, ...props}) => {
-  let className = "px-4 py-2 rounded-lg text-sm ";
+const variantMap = {
+  primary: 'kc-btn--primary',
+  secondary: 'kc-btn--outline',
+  outline: 'kc-btn--outline',
+  'outline-white': 'kc-btn--outline-white',
+  accent: 'kc-btn--gold',
+  gold: 'kc-btn--gold',
+};
 
-  switch (type) {
-    case "primary":
-      className += "bg-primary text-white";
-      break;
-    case "outline":
-      className += "border border-primary";
-      break;
-    case "secondary":
-      className += "bg-light text-primary";
-      break;
-    case "accent":
-      className += "bg-accent text-primary";
-      break;
-    default:
-      className += "";
-      break;
-  }
+const Button = ({ type, children, ...props }) => {
+  const variantClass = variantMap[type] || 'kc-btn--primary';
 
   return (
-    <button className={className} {...props}>
+    <button className={`kc-btn ${variantClass}`} {...props}>
       {children}
     </button>
   );

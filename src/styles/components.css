@@ -1,0 +1,402 @@
+/* ============================================================
+   KINGDOM CALL GLOBAL — Component Styles
+   Requires: tokens.css
+   ============================================================ */
+
+/* ── Typography Utilities ─────────────────────────────────── */
+
+.kc-display {
+  font-family: var(--kc-font-display);
+  font-size: var(--kc-text-2xl);
+  font-weight: 700;
+  color: var(--kc-navy);
+  text-transform: uppercase;
+  letter-spacing: var(--kc-tracking-tight);
+  line-height: 1.1;
+}
+
+.kc-display--gold {
+  color: var(--kc-gold);
+}
+
+.kc-display--white {
+  color: var(--kc-white);
+}
+
+.kc-script {
+  font-family: var(--kc-font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--kc-text-xl);
+  color: var(--kc-gold-light);
+  line-height: 1.3;
+}
+
+/* e.g. "FAITH. UNITY. COMMUNITY. PURPOSE." */
+.kc-tagline {
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-sm);
+  font-weight: 700;
+  letter-spacing: var(--kc-tracking-widest);
+  text-transform: uppercase;
+  color: var(--kc-navy);
+}
+
+.kc-tagline--white {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.kc-label {
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-xs);
+  font-weight: 700;
+  letter-spacing: var(--kc-tracking-wider);
+  text-transform: uppercase;
+}
+
+.kc-body {
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-base);
+  color: var(--kc-text-body);
+  line-height: 1.65;
+}
+
+
+/* ── Divider ──────────────────────────────────────────────── */
+
+/* Usage: <div class="kc-divider"><span></span><span></span><span></span></div> */
+.kc-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.kc-divider span {
+  flex: 1;
+  height: 1px;
+  background: var(--kc-gold);
+  opacity: 0.5;
+}
+
+.kc-divider span:nth-child(2) {
+  flex: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--kc-gold);
+  opacity: 1;
+}
+
+
+/* ── Partner Banner ───────────────────────────────────────── */
+
+/* Dark navy bar with gold border. Used above partner church name. */
+.kc-partner-banner {
+  background: var(--kc-navy);
+  border: var(--kc-border-gold);
+  border-radius: var(--kc-radius-sm);
+  padding: var(--kc-space-2) var(--kc-space-5);
+  text-align: center;
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-xs);
+  font-weight: 700;
+  letter-spacing: var(--kc-tracking-wider);
+  text-transform: uppercase;
+  color: var(--kc-white);
+}
+
+
+/* ── You're Invited Block ─────────────────────────────────── */
+
+/* Dark section with centered script heading + body copy */
+.kc-invite-block {
+  background: var(--kc-navy-dark);
+  border-radius: var(--kc-radius-md);
+  padding: var(--kc-space-6);
+  text-align: center;
+  border: 1px solid rgba(200, 152, 26, 0.35);
+}
+
+.kc-invite-block__title {
+  font-family: var(--kc-font-display);
+  font-style: italic;
+  font-size: var(--kc-text-lg);
+  color: var(--kc-gold-light);
+  margin-bottom: var(--kc-space-2);
+}
+
+.kc-invite-block__body {
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-sm);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+
+/* ── Icon Grid ────────────────────────────────────────────── */
+
+/* Row of 5 navy circle icons with short labels beneath each */
+.kc-icon-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--kc-space-2);
+  background: var(--kc-off-white);
+  border: var(--kc-border-gold-pale);
+  border-radius: var(--kc-radius-md);
+  padding: var(--kc-space-4);
+}
+
+.kc-icon-grid__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--kc-space-2);
+  flex: 1;
+}
+
+.kc-icon-grid__circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--kc-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--kc-white);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.kc-icon-grid__label {
+  font-family: var(--kc-font-body);
+  font-size: 9px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--kc-navy);
+  line-height: 1.3;
+}
+
+
+/* ── Event Detail Strip ───────────────────────────────────── */
+
+/* Three cells: date | time | location */
+.kc-event-strip {
+  display: flex;
+  background: var(--kc-off-white);
+  border: var(--kc-border-gold-pale);
+  border-radius: var(--kc-radius-md);
+  overflow: hidden;
+}
+
+.kc-event-strip__cell {
+  flex: 1;
+  padding: var(--kc-space-3) var(--kc-space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--kc-space-2);
+  border-right: 1px solid var(--kc-gold-pale);
+}
+
+.kc-event-strip__cell:last-child {
+  border-right: none;
+}
+
+.kc-event-strip__icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--kc-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--kc-white);
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.kc-event-strip__sublabel {
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-xs);
+  color: var(--kc-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.kc-event-strip__value {
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-sm);
+  font-weight: 700;
+  color: var(--kc-gold);
+  line-height: 1.2;
+}
+
+
+/* ── Church Partner Card ──────────────────────────────────── */
+
+.kc-church-card {
+  background: #fff;
+  border: 0.5px solid #e0e0e0;
+  border-top: 3px solid var(--kc-gold);
+  border-radius: var(--kc-radius-md);
+  padding: var(--kc-space-4);
+  box-shadow: var(--kc-shadow-card);
+}
+
+.kc-church-card__name {
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-base);
+  font-weight: 700;
+  color: var(--kc-navy);
+  margin-bottom: 2px;
+}
+
+.kc-church-card__pastor {
+  font-family: var(--kc-font-display);
+  font-style: italic;
+  font-size: var(--kc-text-sm);
+  color: var(--kc-gold);
+  margin-bottom: var(--kc-space-2);
+}
+
+.kc-church-card__desc {
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-sm);
+  color: var(--kc-text-muted);
+  line-height: 1.5;
+}
+
+
+/* ── Church Home CTA ──────────────────────────────────────── */
+
+.kc-cta-block {
+  background: var(--kc-off-white);
+  border: var(--kc-border-gold-pale);
+  border-left: 4px solid var(--kc-gold);
+  border-radius: 0 var(--kc-radius-md) var(--kc-radius-md) 0;
+  padding: var(--kc-space-4) var(--kc-space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--kc-space-4);
+}
+
+.kc-cta-block__icon {
+  font-size: 28px;
+  color: var(--kc-gold);
+  flex-shrink: 0;
+}
+
+.kc-cta-block__title {
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-base);
+  font-weight: 700;
+  color: var(--kc-navy);
+  text-transform: uppercase;
+  letter-spacing: var(--kc-tracking-wide);
+  margin-bottom: 4px;
+}
+
+.kc-cta-block__sub {
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-sm);
+  color: var(--kc-text-muted);
+  line-height: 1.4;
+}
+
+
+/* ── Buttons ──────────────────────────────────────────────── */
+
+.kc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-sm);
+  font-weight: 700;
+  letter-spacing: var(--kc-tracking-wider);
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: var(--kc-radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--kc-transition), transform var(--kc-transition);
+  text-decoration: none;
+}
+
+.kc-btn:hover  { opacity: 0.88; }
+.kc-btn:active { transform: scale(0.98); }
+
+/* Navy fill (default) */
+.kc-btn--primary {
+  background: var(--kc-navy);
+  color: var(--kc-white);
+}
+
+/* Gold fill (primary CTA / register) */
+.kc-btn--gold {
+  background: var(--kc-gold);
+  color: var(--kc-navy-dark);
+}
+
+/* Navy outline */
+.kc-btn--outline {
+  background: transparent;
+  color: var(--kc-navy);
+  border: 2px solid var(--kc-navy);
+}
+
+/* White outline (on dark backgrounds) */
+.kc-btn--outline-white {
+  background: transparent;
+  color: var(--kc-white);
+  border: 2px solid var(--kc-white);
+}
+
+
+/* ── Badge / Tag ──────────────────────────────────────────── */
+
+.kc-badge {
+  display: inline-block;
+  background: var(--kc-gold-pale);
+  color: var(--kc-navy-dark);
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-xs);
+  font-weight: 700;
+  letter-spacing: var(--kc-tracking-wide);
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: var(--kc-radius-full);
+  border: 1px solid var(--kc-gold);
+}
+
+
+/* ── Footer / All Welcome Strip ───────────────────────────── */
+
+.kc-all-welcome {
+  text-align: center;
+  font-family: var(--kc-font-body);
+  font-size: var(--kc-text-xs);
+  font-weight: 700;
+  letter-spacing: var(--kc-tracking-widest);
+  text-transform: uppercase;
+  color: var(--kc-navy);
+  padding: var(--kc-space-2) var(--kc-space-4);
+  border-top: 1px solid var(--kc-gold-pale);
+  border-bottom: 1px solid var(--kc-gold-pale);
+}
+
+
+/* ── Section Backgrounds ──────────────────────────────────── */
+
+/* Light cream — use for alternating sections */
+.kc-bg-light   { background: var(--kc-off-white); }
+
+/* Navy — dark sections (hero, invites, footers) */
+.kc-bg-navy    { background: var(--kc-navy); }
+.kc-bg-navy-dark { background: var(--kc-navy-dark); }
+
+/* White — default content areas */
+.kc-bg-white   { background: var(--kc-white); }

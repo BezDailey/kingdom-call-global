@@ -19,9 +19,7 @@ const routes = [
     path: '/components',
     element: <ComponentLibrary />,
   },
-  { path: '/events',
-    element: <Events />
-  },
+  { path: '/events', element: <Events /> },
   {
     path: '/gallery',
     element: <Gallery />,
@@ -29,7 +27,7 @@ const routes = [
   {
     path: '/unity2025',
     element: <Unity2025 />,
-  }
+  },
 ];
 
 export default routes;

@@ -30,10 +30,54 @@ No global state library. All state is local React hooks (`useState`/`useEffect`)
 
 ### Styling
 
-Tailwind-first — no CSS modules. Custom theme is defined in `tailwind.config.js`:
+Two styling layers coexist:
+
+**1. Tailwind CSS** — utility-first, used for layout, spacing, and responsive behavior. Custom theme in `tailwind.config.js`:
 - Primary color: `#00425F` (deep blue)
 - Accent: `#F6F2CB` (gold)
 - Fonts: Merriweather (headings), Inter (body) — loaded from Google Fonts in `index.html`
+
+**2. Design System** (brand-authoritative) — defined in `src/styles/tokens.css` and `src/styles/components.css`, imported first in `main.jsx`. Use these for any new brand UI. See `DESIGN_SYSTEM.md` (not checked in) for full documentation.
+
+- **Tokens** (`tokens.css`): CSS custom properties for color, type scale, spacing, radii, shadows, transitions.
+- **Components** (`components.css`): pre-built class-based components — use these instead of reimplementing from scratch.
+
+#### Design system color palette
+
+| Token | Hex | Usage |
+|---|---|---|
+| `--kc-navy` | `#0D1B5C` | Primary brand color — backgrounds, text, icons |
+| `--kc-navy-dark` | `#081040` | Dark sections: hero, invite blocks, footers |
+| `--kc-gold` | `#C8981A` | Primary accent — borders, highlights, CTA buttons |
+| `--kc-gold-light` | `#E8B84B` | Script text on dark backgrounds, hover states |
+| `--kc-gold-pale` | `#F5E4B0` | Section backgrounds, subtle borders |
+| `--kc-off-white` | `#F7F4ED` | Alternating section background (not cards) |
+
+#### Design system components
+
+| Class | Usage |
+|---|---|
+| `.kc-display` / `.kc-display--white` / `.kc-display--gold` | Page/section headlines (always uppercase) |
+| `.kc-script` | Warm/invitational phrases only |
+| `.kc-tagline` / `.kc-tagline--white` | Brand pillars line: "FAITH. UNITY. COMMUNITY. PURPOSE." |
+| `.kc-label`, `.kc-body` | UI labels and body copy |
+| `.kc-btn--primary/--gold/--outline/--outline-white` | Buttons |
+| `.kc-badge` | Tags/badges |
+| `.kc-divider` | Gold decorative separator |
+| `.kc-partner-banner` | Dark navy bar with gold border above partner name |
+| `.kc-invite-block` | Dark navy invite section |
+| `.kc-icon-grid` | 5-item row of navy circle icons |
+| `.kc-event-strip` | Date/time/location strip |
+| `.kc-church-card` | Partner church card (gold top border) |
+| `.kc-cta-block` | Church home CTA (gold left border) |
+| `.kc-all-welcome` | Footer strip |
+| `.kc-bg-navy`, `.kc-bg-navy-dark`, `.kc-bg-light`, `.kc-bg-white` | Section backgrounds |
+
+#### Coexistence rules
+- Use Tailwind for layout, responsiveness, and spacing.
+- Use design system classes (`.kc-*`) for brand-specific typography, components, and color.
+- Do not override `--kc-*` tokens with raw hex values inline — reference them via the component classes or CSS variables.
+- New pages should follow the section background alternation pattern: navy hero → white → off-white → navy-dark → navy footer.
 
 ### Assets
 

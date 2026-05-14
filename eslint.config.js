@@ -5,6 +5,7 @@ import pluginPrettier from 'eslint-plugin-prettier';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
+  { ignores: ['dist/**'] },
   { files: ['**/*.{js,mjs,cjs,jsx}'] },
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
@@ -22,6 +23,7 @@ export default [
     },
     rules: {
       'prettier/prettier': 'error',
+      'react/prop-types': 'off',
     },
   },
 ];

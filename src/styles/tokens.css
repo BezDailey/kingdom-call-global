@@ -1,0 +1,73 @@
+/* ============================================================
+   KINGDOM CALL GLOBAL — Design Tokens
+   Source: Brand flyers / visual identity
+   ============================================================ */
+
+:root {
+  /* --- Color: Navy --- */
+  --kc-navy-dark:    #081040;
+  --kc-navy:         #0D1B5C;   /* Primary brand color */
+  --kc-navy-mid:     #1A2A72;
+
+  /* --- Color: Gold --- */
+  --kc-gold:         #C8981A;   /* Primary accent */
+  --kc-gold-light:   #E8B84B;   /* Hover / highlights */
+  --kc-gold-pale:    #F5E4B0;   /* Backgrounds / borders */
+
+  /* --- Color: Neutral --- */
+  --kc-white:        #FFFFFF;
+  --kc-off-white:    #F7F4ED;   /* Section backgrounds */
+  --kc-text-body:    #2A2A2A;
+  --kc-text-muted:   #5A5A5A;
+
+  /* --- Typography: Font Families --- */
+  --kc-font-display: 'Georgia', serif;        /* Headlines, partner names */
+  --kc-font-body:    system-ui, sans-serif;   /* Body, labels, UI */
+  --kc-font-mono:    monospace;               /* Dev only */
+
+  /* --- Typography: Scale --- */
+  --kc-text-xs:     10px;
+  --kc-text-sm:     12px;
+  --kc-text-base:   14px;
+  --kc-text-md:     16px;
+  --kc-text-lg:     20px;
+  --kc-text-xl:     24px;
+  --kc-text-2xl:    32px;
+  --kc-text-3xl:    40px;
+
+  /* --- Typography: Letter Spacing --- */
+  --kc-tracking-tight:  -0.01em;
+  --kc-tracking-normal:  0em;
+  --kc-tracking-wide:    0.08em;
+  --kc-tracking-wider:   0.12em;
+  --kc-tracking-widest:  0.18em;
+
+  /* --- Spacing --- */
+  --kc-space-1:  4px;
+  --kc-space-2:  8px;
+  --kc-space-3:  12px;
+  --kc-space-4:  16px;
+  --kc-space-5:  20px;
+  --kc-space-6:  24px;
+  --kc-space-8:  32px;
+  --kc-space-10: 40px;
+  --kc-space-12: 48px;
+
+  /* --- Border Radius --- */
+  --kc-radius-sm:   4px;
+  --kc-radius-md:   8px;
+  --kc-radius-lg:   12px;
+  --kc-radius-full: 9999px;
+
+  /* --- Border --- */
+  --kc-border-gold:      1.5px solid #C8981A;
+  --kc-border-gold-pale: 1px solid #F5E4B0;
+  --kc-border-navy:      1px solid #0D1B5C;
+
+  /* --- Shadows --- */
+  --kc-shadow-card: 0 2px 8px rgba(13, 27, 92, 0.08);
+  --kc-shadow-elevated: 0 4px 16px rgba(13, 27, 92, 0.14);
+
+  /* --- Transitions --- */
+  --kc-transition: 150ms ease;
+}

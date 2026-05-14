@@ -14,7 +14,15 @@ const imagesDir = path.join(__dirname, subfolder);
 const outputPath = path.join(__dirname, 'public', 'gallery', 'index.json');
 
 // Valid image file extensions
-const validExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.JPG'];
+const validExtensions = [
+  '.jpg',
+  '.jpeg',
+  '.png',
+  '.gif',
+  '.webp',
+  '.svg',
+  '.JPG',
+];
 
 // Generate jsDelivr base URL
 const cdnBase = `https://cdn.jsdelivr.net/gh/${githubUsername}/${repoName}@${branch}/${subfolder}/`;
@@ -26,15 +34,17 @@ fs.readdir(imagesDir, (err, files) => {
   }
 
   // Filter for valid image files
-  const imageFiles = files.filter(file =>
-    validExtensions.includes(path.extname(file).toLowerCase())
+  const imageFiles = files.filter((file) =>
+    validExtensions.includes(path.extname(file).toLowerCase()),
   );
 
   // Generate full jsDelivr URLs
-  const imageUrls = imageFiles.map(file => cdnBase + encodeURIComponent(file));
+  const imageUrls = imageFiles.map(
+    (file) => cdnBase + encodeURIComponent(file),
+  );
 
   // Write to index.json
-  fs.writeFile(outputPath, JSON.stringify(imageUrls, null, 2), err => {
+  fs.writeFile(outputPath, JSON.stringify(imageUrls, null, 2), (err) => {
     if (err) {
       console.error('❌ Error writing index.json:', err);
     } else {

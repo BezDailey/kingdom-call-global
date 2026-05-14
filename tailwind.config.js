@@ -4,16 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#00425F', // deep blue
-        primarylight: '#006981',
-        primarytext: '#394955', // greyish
-        accent: '#F6F2CB', // gold
-        accentdark: '#BDBA95',
-        light: '#F1F5F9', // light grey
+        primary: '#0D1B5C', // kc-navy
+        primarylight: '#1A2A72', // kc-navy-mid
+        primarytext: '#2A2A2A', // kc-text-body
+        accent: '#F5E4B0', // kc-gold-pale
+        accentdark: '#C8981A', // kc-gold
+        light: '#F7F4ED', // kc-off-white
       },
       fontFamily: {
-        heading: ['Merriweather', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['Georgia', 'serif'],
+        body: ['system-ui', 'sans-serif'],
       },
     },
   },

@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import UnityPoster from '../../public/unity-poster.jpeg';
-import Button from '../components/Button';
 import UnityFestivalBanner from '../components/UnityFestivalBanner';
 
 const Events = () => {
@@ -14,13 +13,53 @@ const Events = () => {
 
       {/* Main Content */}
       <main className="flex-grow w-full px-2 md:px-6 lg:px-12 xl:px-16 2xl:px-24 py-12 lg:py-16">
+        {/* Invite card + poster */}
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="flex flex-col bg-accent p-10 rounded justify-center text-center">
-            <p className="text-primarytext">Starts In:</p>
-            <h1 className="font-heading text-3xl text-primary py-2">00:00:00</h1>
-            <Button type="outline">Sign up</Button>
+          <div className="kc-invite-block flex flex-col gap-4 items-center text-center">
+            <span className="kc-badge">2nd Annual</span>
+            <div className="kc-invite-block__title">You&apos;re Invited!</div>
+            <div className="kc-invite-block__body">
+              Come experience a day of powerful worship, life-changing word,
+              inspiring ministries, great food, and fun for the entire family!
+            </div>
+            <a className="kc-btn kc-btn--gold" href="#">
+              Register Now
+            </a>
           </div>
           <img src={UnityPoster} className="w-full rounded object-cover" />
+        </div>
+
+        {/* Event Strip */}
+        <div className="kc-event-strip max-w-5xl mx-auto mt-8">
+          <div className="kc-event-strip__cell">
+            <div className="kc-event-strip__icon">&#128197;</div>
+            <div>
+              <div className="kc-event-strip__sublabel">Date</div>
+              <div className="kc-event-strip__value">
+                Saturday
+                <br />
+                June 13, 2026
+              </div>
+            </div>
+          </div>
+          <div className="kc-event-strip__cell">
+            <div className="kc-event-strip__icon">&#128336;</div>
+            <div>
+              <div className="kc-event-strip__sublabel">Time</div>
+              <div className="kc-event-strip__value">
+                12:00 PM &ndash; 4:00 PM
+              </div>
+            </div>
+          </div>
+          <div className="kc-event-strip__cell">
+            <div className="kc-event-strip__icon">&#128205;</div>
+            <div>
+              <div className="kc-event-strip__sublabel">Location</div>
+              <div className="kc-event-strip__value">
+                Tampa Water Works Park
+              </div>
+            </div>
+          </div>
         </div>
       </main>
 
@@ -28,6 +67,6 @@ const Events = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default Events;
