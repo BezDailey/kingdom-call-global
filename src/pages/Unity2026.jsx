@@ -264,16 +264,13 @@ const Unity2026 = () => {
                 )}
                 {p.desc && <div className="kc-church-card__desc">{p.desc}</div>}
                 {p.valuePropIcons && (
-                  <ul
-                    className="kc-church-card__desc mt-2"
-                    style={{ paddingLeft: '1rem' }}
-                  >
+                  <div className="kc-church-card__desc mt-2">
                     {p.valuePropIcons.map((item) => (
-                      <li key={item} style={{ marginBottom: '4px' }}>
-                        {item}
-                      </li>
+                      <div key={item} style={{ marginBottom: '4px' }}>
+                        &ndash; {item}
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 )}
               </div>
             ))}

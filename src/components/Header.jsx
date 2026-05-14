@@ -2,61 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 
-// Example list of partner churches (replace with your actual data)
-const partnerChurches = [
-  { name: 'Manifestations Worldwide', path: '/partnerships/grace-chapel' },
-  { name: 'Love First Christian Center', path: '/partnerships/faith-assembly' },
-  { name: 'Firm Foundation', path: '/partnerships/hope-community' },
-  {
-    name: 'Zoe Internation Faith Center',
-    path: '/partnerships/hope-community',
-  },
-  { name: 'Iglesia LaVerdad', path: '/partnerships/hope-community' },
-  { name: 'Elevation Life Center', path: '/partnerships/hope-community' },
-  { name: 'NOW Church', path: '/partnerships/hope-community' },
-  { name: 'Allen Temple AME Church', path: '/partnerships/hope-community' },
-  {
-    name: 'Living in Victory Christian Church',
-    path: '/partnerships/hope-community',
-  },
-  { name: 'Truth Center Church', path: '/partnerships/hope-community' },
-  { name: 'Champions Life Church', path: '/partnerships/hope-community' },
-];
-
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [dropdownTimeout, setDropdownTimeout] = useState(null);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  // Desktop dropdown handlers
-  const handleDropdownMouseEnter = () => {
-    if (dropdownTimeout) {
-      clearTimeout(dropdownTimeout);
-      setDropdownTimeout(null);
-    }
-    setDropdownOpen(true);
-  };
-
-  const handleDropdownMouseLeave = () => {
-    if (dropdownTimeout) {
-      clearTimeout(dropdownTimeout);
-    }
-    const timeout = setTimeout(() => {
-      setDropdownOpen(false);
-    }, 1000); // 1 second delay
-    setDropdownTimeout(timeout);
-  };
-
-  const handleDropdownLinkClick = () => {
-    setDropdownOpen(false);
-    if (dropdownTimeout) {
-      clearTimeout(dropdownTimeout);
-      setDropdownTimeout(null);
-    }
   };
 
   return (
@@ -87,49 +37,12 @@ const Header = () => {
           >
             Unity 2026
           </Link>
-          {/* Partnership Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={handleDropdownMouseEnter}
-            onMouseLeave={handleDropdownMouseLeave}
+          <Link
+            className="hover:text-accentdark transition-colors"
+            to="/partnership"
           >
-            <button
-              className="hover:text-accentdark transition-colors focus:outline-none flex items-center"
-              onClick={() => setDropdownOpen((open) => !open)}
-              type="button"
-            >
-              Partnership
-              <svg
-                className="ml-1 w-3 h-3"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {dropdownOpen && (
-              <div
-                className="absolute top-full right-0 mt-2 w-48 bg-white rounded z-10"
-                style={{
-                  border: 'var(--kc-border-gold)',
-                  boxShadow: 'var(--kc-shadow-elevated)',
-                }}
-              >
-                {partnerChurches.map((church) => (
-                  <Link
-                    key={church.name}
-                    // to={church.path}
-                    className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors"
-                    onClick={handleDropdownLinkClick}
-                  >
-                    {church.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+            Partnership
+          </Link>
         </div>
       </header>
 
@@ -172,24 +85,13 @@ const Header = () => {
           >
             Unity 2026
           </Link>
-          {/* Partnership Dropdown for Mobile */}
-          <details>
-            <summary className="py-1 hover:text-accentdark transition-colors cursor-pointer">
-              Partnership
-            </summary>
-            <div className="pl-4">
-              {partnerChurches.map((church) => (
-                <Link
-                  key={church.name}
-                  /*to={church.path}*/
-                  className="block py-1 hover:text-accentdark transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {church.name}
-                </Link>
-              ))}
-            </div>
-          </details>
+          <Link
+            className="py-1 hover:text-accentdark transition-colors"
+            to="/partnership"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Partnership
+          </Link>
         </nav>
       )}
     </>
