@@ -60,7 +60,7 @@ const Events = () => {
                 <br />
                 <span
                   style={{
-                    fontSize: '10px',
+                    fontSize: '12px',
                     fontWeight: 400,
                     color: 'var(--kc-text-muted)',
                   }}

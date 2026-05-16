@@ -78,7 +78,7 @@ const Home = () => {
                   className="flex-shrink-0 flex items-center justify-center"
                   style={{
                     minWidth: '100%',
-                    height: '480px',
+                    height: 'clamp(220px, 55vw, 480px)',
                     background: 'var(--kc-navy)',
                   }}
                 >

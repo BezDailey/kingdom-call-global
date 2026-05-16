@@ -12,7 +12,7 @@ Official website for Kingdom Call Global Inc. — a ministry organization unitin
 
 - **React 19** + **Vite**
 - **Tailwind CSS** (layout, spacing, responsiveness)
-- **Custom design system** (`tokens.css` + `components.css`) for brand identity
+- **Custom design system** (`tokens.css` + `components.css`) for brand identity — includes `@media (max-width: 640px)` overrides for mobile
 - **React Router DOM 7** for client-side routing
 - **ESLint** + **Prettier** for code quality
 - **Heroku** for deployment (`serve` serves the `dist/` folder)

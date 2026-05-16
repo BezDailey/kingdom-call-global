@@ -87,9 +87,9 @@ Two styling layers coexist:
 | `.kc-partner-banner` | Dark navy bar with gold border above partner name |
 | `.kc-invite-block` | Dark navy invite section |
 | `.kc-icon-grid` | 5-item row of navy circle icons |
-| `.kc-event-strip` | Date/time/location strip |
+| `.kc-event-strip` | Date/time/location strip — 4-column row on desktop, 2×2 grid on mobile (≤640px) |
 | `.kc-church-card` | Partner church card (gold top border) |
-| `.kc-cta-block` | Church home CTA (gold left border) |
+| `.kc-cta-block` | Church home CTA (gold left border) — stacks vertically on mobile (≤640px) |
 | `.kc-all-welcome` | Footer strip |
 | `.kc-bg-navy`, `.kc-bg-navy-dark`, `.kc-bg-light`, `.kc-bg-white` | Section backgrounds |
 
@@ -98,6 +98,8 @@ Two styling layers coexist:
 - Use design system classes (`.kc-*`) for brand-specific typography, components, and color.
 - Do not override `--kc-*` tokens with raw hex values inline — reference them via the component classes or CSS variables.
 - New pages should follow the section background alternation pattern: navy hero → white → off-white → navy-dark → navy footer.
+- Mobile overrides for `.kc-*` components belong in the `@media (max-width: 640px)` block at the bottom of `components.css`, not inline in JSX.
+- Use `clamp(min, fluid, max)` for heights and font sizes that must scale with viewport (e.g., carousel height, hero text). Avoid hardcoded `px` heights on image containers.
 
 ### Assets
 

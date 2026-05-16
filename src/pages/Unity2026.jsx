@@ -17,7 +17,7 @@ const partners = [
     shortName: null,
     altName: null,
     tagline: 'Raising Lives. Inspiring Purpose.',
-    pastor: null,
+    pastor: 'Pastor James Scruggs',
     desc: 'Elevation Life Church is committed to empowering individuals and families to live elevated in faith, walk in purpose, and make a Kingdom impact in every area of life and community.',
     valuePropIcons: null,
   },
@@ -196,7 +196,7 @@ const Unity2026 = () => {
                   <br />
                   <span
                     style={{
-                      fontSize: '10px',
+                      fontSize: '12px',
                       fontWeight: 400,
                       color: 'var(--kc-text-muted)',
                     }}
@@ -242,7 +242,7 @@ const Unity2026 = () => {
         {/* Value Props */}
         <section className="kc-bg-light px-2 py-12 lg:py-16 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
           <div
-            className="grid grid-cols-3 md:grid-cols-5 gap-4 rounded-lg p-4"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 rounded-lg p-4"
             style={{ border: 'var(--kc-border-gold-pale)' }}
           >
             {valueProps.map((vp) => (

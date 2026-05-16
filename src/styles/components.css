@@ -400,3 +400,40 @@
 
 /* White — default content areas */
 .kc-bg-white   { background: var(--kc-white); }
+
+
+/* ── Mobile Responsive Overrides (≤640px) ─────────────────── */
+
+@media (max-width: 640px) {
+  /* Event strip: 4 cells → 2×2 grid */
+  .kc-event-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kc-event-strip__cell {
+    border-right: none;
+    border-bottom: 1px solid var(--kc-gold-pale);
+  }
+
+  .kc-event-strip__cell:nth-child(odd) {
+    border-right: 1px solid var(--kc-gold-pale);
+  }
+
+  .kc-event-strip__cell:nth-child(3),
+  .kc-event-strip__cell:nth-child(4) {
+    border-bottom: none;
+  }
+
+  /* Icon grid labels: increase from 9px to 11px */
+  .kc-icon-grid__label {
+    font-size: 11px;
+  }
+
+  /* CTA block: stack icon + text + button vertically */
+  .kc-cta-block {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--kc-space-3);
+  }
+}

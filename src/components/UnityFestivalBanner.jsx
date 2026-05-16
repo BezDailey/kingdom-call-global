@@ -34,12 +34,12 @@ const UnityFestivalBanner = () => {
   }
 
   return (
-    <div className="kc-bg-navy-dark w-full py-3 flex flex-col items-center">
-      <span className="kc-tagline kc-tagline--white mb-2">
+    <div className="kc-bg-navy-dark w-full py-3 px-4 flex flex-col items-center">
+      <span className="kc-tagline kc-tagline--white mb-2 text-center">
         2nd Annual Unity Festival &mdash; Countdown
       </span>
       <div
-        className="flex gap-4 text-xl font-bold tabular-nums"
+        className="flex flex-wrap justify-center gap-3 sm:gap-4 text-base sm:text-xl font-bold tabular-nums"
         style={{ color: 'var(--kc-gold-light)' }}
       >
         <span>{timeLeft.days}d</span>

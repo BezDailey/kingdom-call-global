@@ -58,8 +58,7 @@ const Gallery = () => {
                 <div
                   className="flex items-center justify-center w-full"
                   style={{
-                    height: '70vh',
-                    maxHeight: '700px',
+                    height: 'clamp(260px, 50vh, 700px)',
                     background: 'var(--kc-navy-dark)',
                   }}
                 >
