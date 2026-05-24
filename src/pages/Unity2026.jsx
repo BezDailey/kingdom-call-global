@@ -4,11 +4,11 @@ import Footer from '../components/Footer';
 import UnityFestivalBanner from '../components/UnityFestivalBanner';
 
 const valueProps = [
-  { emoji: '👥', label: 'Building Stronger Communities' },
-  { emoji: '❤️', label: 'Encouraging Faith & Purpose' },
-  { emoji: '🤝', label: 'Connecting People & Resources' },
-  { emoji: '🎉', label: 'Fun & Activities for All Ages' },
-  { emoji: '🙌', label: 'Together, We Make an Impact!' },
+  { emoji: '🙏', label: 'Powerful Worship' },
+  { emoji: '🎤', label: 'Inspiring Speakers' },
+  { emoji: '🤝', label: 'Community Resources' },
+  { emoji: '🍽️', label: 'Great Food & Vendors' },
+  { emoji: '👨‍👩‍👧‍👦', label: 'Fun for the Whole Family' },
 ];
 
 const partners = [
@@ -251,6 +251,82 @@ const Unity2026 = () => {
                 <div className="kc-icon-grid__label">{vp.label}</div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Featured Vendor */}
+        <section className="kc-bg-navy-dark px-2 py-12 lg:py-16 md:px-6 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="max-w-3xl mx-auto text-center mb-6">
+            <span className="kc-badge mb-4 inline-block">Meet Our Amazing Vendor &amp; Author!</span>
+            <p className="kc-label mb-1" style={{ color: 'rgba(255,255,255,0.6)' }}>
+              Join us in welcoming
+            </p>
+            <h2 className="kc-display kc-display--gold pb-2">Tashia Mustafa</h2>
+            <div className="kc-divider mt-2 mb-6">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-shrink-0 text-center">
+              <div
+                className="inline-block px-6 py-8 rounded-lg"
+                style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid var(--kc-gold)' }}
+              >
+                <div className="kc-display kc-display--white text-left leading-tight" style={{ fontSize: 'clamp(22px, 4vw, 36px)' }}>
+                  <span style={{ color: 'var(--kc-gold-light)' }}>Girl,</span>
+                  <br />
+                  Put Them
+                  <br />
+                  <span style={{ color: 'var(--kc-gold-light)' }}>Bags</span>
+                  <br />
+                  Down!
+                </div>
+                <p className="kc-script mt-3" style={{ fontSize: '13px' }}>
+                  Let Go. Level Up. Live Free.
+                </p>
+                <p
+                  className="kc-label mt-1"
+                  style={{ color: 'rgba(255,255,255,0.5)', fontSize: '11px' }}
+                >
+                  — Tashia Mustafa
+                </p>
+              </div>
+            </div>
+
+            <div className="flex-grow text-center md:text-left">
+              <p className="kc-body mb-4" style={{ color: 'rgba(255,255,255,0.85)' }}>
+                She&apos;s bringing powerful words of encouragement, healing, and
+                empowerment to help you{' '}
+                <span className="kc-script" style={{ fontSize: '16px' }}>
+                  Let Go. Level Up. Live Free.
+                </span>
+              </p>
+              <div
+                className="inline-flex items-center gap-3 px-5 py-3 rounded-lg mb-5"
+                style={{ background: 'var(--kc-navy)', border: '1px solid var(--kc-gold)' }}
+              >
+                <span style={{ fontSize: '24px' }}>📖</span>
+                <div className="text-left">
+                  <div className="kc-label" style={{ color: 'var(--kc-gold-light)' }}>
+                    Selling &amp; Signing Books
+                  </div>
+                  <div className="kc-body" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px' }}>
+                    at the Festival!
+                  </div>
+                </div>
+              </div>
+              <p className="kc-body" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                Don&apos;t miss this opportunity to be inspired and take home a
+                book that will change your life. Visit Tashia Mustafa&apos;s
+                table at the festival!
+              </p>
+              <p className="kc-script mt-4">
+                Come for the Unity. Stay for the Impact!
+              </p>
+            </div>
           </div>
         </section>
 
